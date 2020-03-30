@@ -1,0 +1,46 @@
+{% extends 'getbook.html' %}
+{% block content %}
+{% for hotel in Books %}
+<div class="col-md-4" xmlns="http://www.w3.org/1999/html">
+                <div style="background-color: rgb(241, 240, 240);margin-top:20px;">
+                    <p class="mb-2" >Uploaded By:<font color="red">{{hotel.user}}</font></p>
+                <img src="{{ hotel.Bookadd_img.url }}" >
+                <div class="desc" ">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p style="margin: 0;">Title:{{hotel.bookname}}</p>
+                            <p style="margin: 0;">Language:{{hotel.language}}</p>
+                            <p style="margin: 0;">ISBN:{{hotel.isbno}}</p>
+
+                        </div>
+                        <div class="col-md-6">
+                            <p style="margin: 0;">Author:{{hotel.auther}}</p>
+                            <p style="margin: 0;">Genre:{{hotel.id}}</p>
+                            <p style="margin: 0;">Pages:{{hotel.availability}}</p>
+
+
+
+                        </div>
+                    </div>
+                    <div>
+                        {% if hotel.availability == 1 %}
+                        <form  action= "{% url 'requ' %}">
+                        <button  name="avail" value={{hotel.id}} type="submit"  class="btn-sm btn-success mb-2" >Request</button>
+                        {% endif %}
+                        </form>
+                        {% if hotel.availability == 0 %}
+                         <form  action= "{% url 'cancel' %}">
+                        <button class="btn-sm btn-danger" name="availb" value={{hotel.id}} type="submit">Cancel Request</button>
+                        {% endif %}
+                        </form>
+                    </div>
+                </div>
+            </div>
+            </div>
+{% endfor %}
+
+{% endblock %}
+
+
+
+

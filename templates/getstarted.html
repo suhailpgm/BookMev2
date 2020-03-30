@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Bookit,business,company,agency,multipurpose,modern,bootstrap4">
+  
+  <meta name="author" content="themefisher.com">
+
+  <title>Bookit</title>
+
+
+
+
+            {% load staticfiles %}
+   <!-- javascripts -->
+   <script src={% static 'js/script.js' %}></script>
+  <!-- bootstrap.min css -->
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <!-- Icon Font Css -->
+  <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}">
+  <link rel="stylesheet" href="{% static 'css/all.css' %}">
+  <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="{% static 'css/slick.css' %}">
+  <link rel="stylesheet" href="{% static 'css/slick-theme.css' %}">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+
+</head>
+
+<body>
+
+<!-- Header Start --> 
+
+<header class="navigation">
+	
+	<nav class="navbar navbar-expand-lg  py-1 custom " id="navbar">
+		<div class="container">
+		
+			<ul style="list-style-type:none">
+				<li>
+		 			 <img src="{% static 'images/book.png' %}" alt="Bookit logo" class="logo">
+		   		 </li>
+		    	<li>
+		  			<a class="navbar-brand" href="index.html">
+		  				<font size=3 style="margin-left:-2px"> Book<span>it</span> </font>	
+		  			</a>
+		   		 </li>
+			</ul>
+		 	<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="fa fa-bars"></span>
+		  	</button>
+	  
+		  	<div class="collapse navbar-collapse text-center pb-3" id="navbarsExample09">
+
+				<ul class="navbar-nav ml-auto ">
+			  		<li class="nav-item active">
+						<a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+			  		</li>
+				
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
+						<ul class="dropdown-menu" aria-labelledby="dropdown03">
+							<li><a class="dropdown-item" href="#">Our company</a></li>
+						</ul>
+					  </li>			  
+					  
+			   		<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+						<ul class="dropdown-menu" aria-labelledby="dropdown05">
+							<li><a class="dropdown-item" href="#">Get a book</a></li>
+							<li><a class="dropdown-item" href="#">Share a book</a></li>
+							<li><a class="dropdown-item" href="#">Status</a></li>
+							<li><a class="dropdown-item" href="#">Blog </a></li>
+						</ul>
+					 </li>
+					  
+			  		 <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+					 <li class="nav-item"><a href={% url 'signout' %} class="nav-link">Sign Out</a></li>
+				</ul>
+			 </div>
+		</div>
+	</nav>
+</header>
+
+<!-- Header Close --> 
+
+<div class="main-wrapper ">
+
+<section class="section intro">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-5">
+				<div class="section-title pt-5">
+					<span class="h6 text-color ">We are creative</span>
+					<h2 class="mt-3">We provide best solution to readers with their book problems. </h2>
+				</div>
+			</div>
+
+			<div class="col-lg-6 ml-auto">
+				<div class="row">
+					<div class="col-lg-6 col-md-6">
+						<div class="intro-item mb-4 mb-lg-0 pt-4">
+							<h4 class="mt-4">Modern & Responsive design</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, aspernatur.</p>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6">
+						<div class="intro-item mb-4 mb-lg-0 pt-4">
+							<h4 class="mt-4">Awarded licensed company</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, aspernatur.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Section Intro END -->
+<!-- Section Services Start -->
+
+<section class="section pricing bg-gray position-relative">
+	<div class="hero-img bg-overlay h70"></div>
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-7 text-center">
+				<div class="section-title">
+					<h2 class="mt-3 content-title text-white">No complications. Get a book or share it.</h2>
+				</div>
+			</div>
+		</div>
+
+		<div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card text-center mb-md-0 mb-3">
+                    <div class="card-body py-5">
+                        <div class="pricing-header mb-5">
+                            <h1>Get a Book</h1>
+                        </div>
+                        <ul class="list-unstyled lh-45 mt-3 text-black">
+                            <li>- Choose</li>
+                            <li>- Request</li>
+                            <li>- Read</li>
+                        </ul>
+                        <a href="{% url 'getabook' %}" class="btn btn-small btn-main mt-3 btn-round-full">Get</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card text-center mb-md-0 mb-3">
+                    <div class="card-body py-5">
+                        <div class="pricing-header mb-5">
+                            <h1>Share a Book</h1>
+                        </div>
+                        <ul class="list-unstyled lh-45 mt-3 text-black">
+                            <li>- Finished reading?</li>
+                            <li>- Let fellow readers also read</li>
+                            <li>- Share now</li>
+                        </ul>
+                        <a href="{% url 'givebook' %}" class="btn btn-small btn-main mt-3 btn-round-full">Share</a>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+	</div>
+</section>
+
+<!-- Section Pricing End -->
+
+
+<!-- footer Start -->
+<footer class="footer section">
+	<div class="container">
+		<div class="row">
+			
+			<div class="col-lg-3 col-sm-6">
+				<div class="widget">
+					<div class="logo mb-4">
+						<h3>Book<span>it.</span></h3>
+					</div>
+					<h6><a href="tel:8999999999" >Support@bookit.com</a></h6>
+					<a href="mailto:support@gmail.com"><span class="text-color h4">8999999999</span></a>
+				</div>
+			</div>
+		</div>
+		
+		<div class="footer-btm pt-4">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="copyright">
+						&copy; Copyright Reserved to <span class="text-color">Bookit.</span> by <a href="https://themefisher.com/" >viboski</a>
+					</div>
+				</div>
+				<div class="col-lg-6 text-left text-lg-right">
+					<ul class="list-inline footer-socials">
+						<li class="list-inline-item"><a href="https://www.facebook.com/themefisher"><i class="ti-facebook mr-2"></i>Facebook</a></li>
+						<li class="list-inline-item"><a href="https://twitter.com/themefisher"><i class="ti-twitter mr-2"></i>Twitter</a></li>
+						<li class="list-inline-item"><a href="https://www.pinterest.com/themefisher/"><i class="ti-linkedin mr-2 "></i>Linkedin</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+   
+    </div>
+
+    <!-- 
+    Essential Scripts
+    =====================================-->
+
+    
+    <!-- Main jQuery -->
+    <script src="plugins/jquery/jquery.js"></script>
+    <script src="js/contact.js"></script>
+    <!-- Bootstrap 4.3.1 -->
+    <script src="plugins/bootstrap/js/popper.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+   <!--  Magnific Popup-->
+    <script src="plugins/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+    <!-- Slick Slider -->
+    <script src="plugins/slick-carousel/slick/slick.min.js"></script>
+    <!-- Counterup -->
+    <script src="plugins/counterup/jquery.waypoints.min.js"></script>
+    <script src="plugins/counterup/jquery.counterup.min.js"></script>
+
+    <!-- Google Map -->
+    <script src="plugins/google-map/map.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script>    
+    
+    <script src="js/script.js"></script>
+
+  </body>
+  </html>
