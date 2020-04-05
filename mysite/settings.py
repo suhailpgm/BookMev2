@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'htmlcss.apps.HtmlcssConfig',
+     'status.apps.StatusConfig',
     'signup.apps.SignupConfig',
     'givebook.apps.GivebookConfig',
     'django.contrib.admin',

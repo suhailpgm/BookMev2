@@ -37,7 +37,7 @@
 
 			<ul style="list-style-type:none">
 				<li>
-		 			 <img src="book.png" alt="Omnifood logo" class="logo">
+		 			 <img src="{% static 'images/book.png' %}" alt="bookit logo" class="logo">
 		   		 </li>
 		    	<li>
 		  			<a class="navbar-brand" href="index.html">
@@ -53,7 +53,7 @@
 
 				<ul class="navbar-nav ml-auto ">
 			  		<li class="nav-item active">
-						<a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+						<a class="nav-link" href="{% url 'index' %}">Home<span class="sr-only">(current)</span></a>
 			  		</li>
 
 					<li class="nav-item dropdown">
@@ -65,22 +65,53 @@
 
 			   		<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+					{% if user.is_authenticated %}
+						<ul class="dropdown-menu" aria-labelledby="dropdown05">
+							<li><a class="dropdown-item" href="{% url 'getabook' %}">Get a book</a></li>
+							<li><a class="dropdown-item" href="{% url 'givebook' %}">Share a book</a></li>
+							<li><a class="dropdown-item" href="#">Status</a></li>
+							<li><a class="dropdown-item" href="#">Blog </a></li>
+						</ul>
+					{% else %}
 						<ul class="dropdown-menu" aria-labelledby="dropdown05">
 							<li><a class="dropdown-item" href="#">Get a book</a></li>
 							<li><a class="dropdown-item" href="#">Share a book</a></li>
 							<li><a class="dropdown-item" href="#">Status</a></li>
 							<li><a class="dropdown-item" href="#">Blog </a></li>
 						</ul>
+					{% endif %}
 					 </li>
 
 			  		 <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-					 <li class="nav-item"><a href="#" class="nav-link">Sign Out</a></li>
+
 				</ul>
+                {% if user.is_authenticated %}
+                <form class="form-lg-inline my-2 my-md-0 ml-lg-4 text-center">
+			 		 <a href={% url 'signout' %} class="btn btn-solid-border btn-round-full">SIGN OUT</a>
+                {% else %}
+				<form class="form-lg-inline my-2 my-md-0 ml-lg-4 text-center">
+			 		 <a href="{% url 'contact' %}" class="btn btn-solid-border btn-round-full">Create an account</a>
+                {% endif %}
+				</form>
 			 </div>
 		</div>
 	</nav>
 </header>
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="navbar-nav">
 
+          <a class="nav-link text-right " href="{% url 'status' %}" style="width: 28rem; color: white;">My Requests </a>
+
+
+          <a class="nav-link text-center" style="width: 20rem; color: white;" href="{% url 'getabook' %}"><h4 style="color:white;">Get a Book</h4><span class="sr-only">(current)</span></a>
+
+
+          <a class="nav-link text-left"  style="width: 30rem; color: white;" href="{% url 'requests' %}">Requests</a>
+
+      </div>
+    </div>
+  </nav>
 <!-- Header Close -->
 <!-- contact form start -->
 <section class="contact-form-wrap section bg-get signup-section">
@@ -104,6 +135,7 @@
     </div>
 
 </section>
+
 <section class="container">
     <div class="gallery" >
 

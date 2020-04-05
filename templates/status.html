@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% block content %}
+<br>
+<br>
+<br>
+<p>my request</p>
+{% for hotel in Books %}
+    {% if hotel.user != request.user %}
+        {% if hotel.reqid == user.id %}
+            <div class="col-md-4" >
+                            <div style="background-color: rgb(241, 240, 240);margin-top:20px;">
+                                 <p class="mb-2" >Uploaded By:<font color="red">{{hotel.user}}</font></p>
+
+                                   <div class="desc">
+                                       <div class="row">
+                                          <div class="col-md-6">
+                                             <p style="margin:0;height:60px;">{{hotel.bookname}}</p>
+
+
+
+                                             <form  action= "{% url 'cancel' %}">
+                                             <button class="btn-sm btn-danger" name="availb" value={{hotel.id}} type="submit">Cancel Request</button>
+
+                                             </form>
+                                          </div>
+                                       </div>
+                                    </div>
+                            </div>
+            </div>
+        {% endif %}
+    {% endif %}
+{% endfor %}
+
+
+<br>
+<br>
+<p>requests</p>
+{% for hotel in Books %}
+    {% if hotel.user == request.user %}
+        {% if hotel.reqid != 0 %}
+            <div class="col-md-4" >
+                            <div style="background-color: rgb(241, 240, 240);margin-top:20px;">
+                                 <p class="mb-2" >requested By:<font color="red">{{hotel.reqname}}</font></p>
+
+                                   <div class="desc">
+                                       <div class="row">
+                                          <div class="col-md-6">
+                                             <p style="margin:0;height:60px;">{{hotel.bookname}}</p>
+
+
+
+                                             <form  action= "{% url 'cancel' %}">
+                                             <button class="btn-sm btn-danger" name="availb" value={{hotel.id}} type="submit">Cancel Request</button>
+
+                                             </form>
+                                          </div>
+                                       </div>
+                                    </div>
+                            </div>
+            </div>
+        {% endif %}
+    {% endif %}
+{% endfor %}
+
+
+
+
+{% endblock %}
+
+
+
+

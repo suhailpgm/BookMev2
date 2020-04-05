@@ -22,6 +22,7 @@ import signup.views
 import getstart.views
 import getbook.views
 import givebook.views
+import status.views
 from django.conf.urls.static import static
 
 
@@ -40,6 +41,11 @@ urlpatterns = [
     path('success/',givebook.views.success,name='success'),
     path('request/',getbook.views.requestbook,name='requ'),
     path('cancel/', getbook.views.cancelbook, name='cancel'),
+    path('status/',status.views.myrequests,name='status'),
+    path('requests/',status.views.requests,name='requests'),
+    path('chats/', status.views.chats, name='chats'),
+    path('chat/', status.views.chatsend, name='chatsend'),
+
 
 
 ]

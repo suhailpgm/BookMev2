@@ -11,5 +11,7 @@ class Bookadd(models.Model):
     Bookadd_img = models.ImageField(upload_to='images/')
     isbno=models.IntegerField()
     availability=models.IntegerField(default=1)
-    pageno= models.IntegerField()
+    pageno= models.IntegerField(null=True)
+    reqid=models.IntegerField(null=True)
+    reqname=models.CharField(max_length=50)
 

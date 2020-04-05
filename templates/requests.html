@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="navbar-nav">
+
+          <a class="nav-link text-right " href="{% url 'getabook' %}" style="width: 28rem; color: white;">Get a Book </a>
+
+
+          <a class="nav-link text-center" style="width: 20rem; color: white;" href="{% url 'requests' %}"><h4 style="color:white;">Requests</h4><span class="sr-only">(current)</span></a>
+
+
+          <a class="nav-link text-left" href="{% url 'status' %}" style="width: 30rem; color: white;" href="#">My Requests</a>
+
+      </div>
+    </div>
+  </nav>
+
+<!-- Header Close -->
+<!-- contact form start -->
+<section class="contact-form-wrap section signup-section">
+    <div class="container">
+        <div class="d-flex justify-content-center h-100">
+        <div class="row text-center">
+                <div class="card" style="width: 50rem;">
+                    <article class="card-body">
+                        <h4 class="card-title text-center text-color pb-4 pt-4">Requests</h4>
+                        <div class="card text-center" style="margin-bottom: 1rem;">
+{% for hotel in Books %}
+    {% if hotel.user == request.user %}
+        {% if hotel.reqid != 0 %}
+
+                            <article class="card-body" style="padding-bottom: 0;">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                    <img src="{{ hotel.Bookadd_img.url }}" height="160px" width="180px">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>requested By:<font color="red">{{hotel.reqname}}</font></p>
+                                        <p>Title:</p>
+                                        <p>ISBN: Name1</p>
+                                        <p>Genre:{{hotel.id}}</p>
+                                    </div>
+                                    <div class="col-md-2 justify-content-center h-100 my-auto">
+                                         <div class="col-md-2 justify-content-center h-100 my-auto">
+
+                                         <form  name="ff" action= "{% url 'chats' %}" method="POST" >
+                                                {% csrf_token %}
+                                                <input type="hidden" name="chatpasssend" value=" " />
+                                                <input type="hidden" name="chatpassrecieverid" value=" {{hotel.reqid}}" />
+                                                <input type="hidden" name="chatpassreciever" value=" {{hotel.reqname}}" />
+                                                <input type="hidden" name="chatpassmessage" value=" " />
+                                                <button class="btn-sm btn-success mb-2"  type="submit" value="a" name="a">Accept</button>
+                                          </form>
+                                         <form  action= "{% url 'cancel' %}">
+                                                <button class="btn-sm btn-danger" name="availb" value={{hotel.id}} type="submit">&nbsp;Reject&nbsp;</button>
+                                          </form>
+                                    </div>
+                                </div>
+                            </article>
+
+
+
+
+        {% endif %}
+    {% endif %}
+{% endfor %}
+                        </div>
+                    </article>
+                </div>
+
+
+
+        </div>        
+        </div>
+    </div>
+</section>
+ 
+{% endblock %}

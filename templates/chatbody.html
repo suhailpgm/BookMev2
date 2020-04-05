@@ -1,0 +1,42 @@
+{% extends 'chat.html' %}
+{% load staticfiles %}
+{% block content %}
+
+
+                <div class="card" style="width: 50rem; height: 30rem;">
+                        <div class="card-header">
+                            <cite><img src="{% static 'images/customer-3.jpeg' %}">{{rname}}</cite>
+                         </div>
+                             <div class="card-body" style="overflow-y: scroll;">
+{% for hotel in MSG %}
+    {% if hotel.sender.id == user.id  %}
+        {% if hotel.recieverid == rid  %}
+            <p align="right">{{hotel.message}}</p>
+        {% endif %}
+    {% endif %}
+    {% if hotel.sender.id == rid  %}
+        {% if hotel.recieverid == user.id  %}
+            <p >{{hotel.message}}</p>
+        {% endif %}
+    {% endif %}
+
+{% endfor%}
+
+                                </div>
+
+                            <div class="card-footer">
+                                <form method = "post" enctype="multipart/form-data" action= "{% url 'chatsend' %}">
+                                     {% csrf_token %}
+                                     {% load widget_tweaks %}
+                                     <div class="form-group">
+
+                                  {% render_field form.message  class+="form-control "  style+="width: 50%; border-radius: 50px; margin: auto;" placeholder+="type your message" %}
+                                     </div><div>
+                                    <button class="btn btn-main btn-round-full" name="submit" type="submit">send</button></div>
+                                </form>
+                            </div>
+                </div>
+
+{% endblock %}
+
+

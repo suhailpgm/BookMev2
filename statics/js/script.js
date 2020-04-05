@@ -50,3 +50,7 @@
         
                 
     }
+
+    function setPara(){
+    chatpass=document.getElementById('chatpass').value;
+    }
