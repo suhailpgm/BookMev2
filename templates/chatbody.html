@@ -19,20 +19,19 @@
             <p >{{hotel.message}}</p>
         {% endif %}
     {% endif %}
-
 {% endfor%}
-
-                                </div>
-
-                            <div class="card-footer">
+                             </div><div class="card-footer">
                                 <form method = "post" enctype="multipart/form-data" action= "{% url 'chatsend' %}">
                                      {% csrf_token %}
                                      {% load widget_tweaks %}
-                                     <div class="form-group">
+                                     <div class="msgfoot">
 
-                                  {% render_field form.message  class+="form-control "  style+="width: 50%; border-radius: 50px; margin: auto;" placeholder+="type your message" %}
-                                     </div><div>
-                                    <button class="btn btn-main btn-round-full" name="submit" type="submit">send</button></div>
+                                  {% render_field form.message  class+=" "  style+="width: 80%; border-radius:
+                                         50px; margin: auto;" placeholder+="type your message" %}
+<!--                                     </div><div>-->
+                                    <button class="btn btn-main btn-round-full" name="submit" type="submit">
+                                        send</button>
+<!--                                     </div>-->
                                 </form>
                             </div>
                 </div>

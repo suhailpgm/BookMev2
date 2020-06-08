@@ -113,45 +113,30 @@
                         </div>
                     </div>
                     <!-- end message -->
-                    <span class="text-color"></span>
-                    <br>
-                    <h3 class="text-md mb-4 text-white">Share your books.</h3>
-                    <br>
+                    <span class="text-color"></span><br>
+                    <h3 class="text-md mb-4 text-white">Share your books.</h3><br>
 					<div class="form-group">
-
-                          {% render_field form.bookname  class+="form-control "  style+="width: 50%; border-radius: 50px; margin: auto;" placeholder+="Name of book" %}
-
-
+						{% render_field form.bookname  class+="form-control "  style+="width: 50%; border-radius: 50px; margin: auto;" placeholder+="Name of book" %}
 					</div>
                     <div class="form-group">
-						  {% render_field form.auther class+="form-control "  style+="width: 50%; border-radius: 50px; margin: auto;" placeholder+="Auther"  %}
+						 {% render_field form.auther class+="form-control "  style+="width: 50%; border-radius: 50px; margin: auto;" placeholder+="Auther"  %}
                     </div>
-
-
-                     <div class="form-group">
+					 <div class="form-group">
 						  {% render_field form.language  class+="form-control "  style+="width: 50%; border-radius: 50px; margin: auto;" placeholder+="language" %}
                      </div>
-
-
 					 <div class="form-group">
 						  {% render_field form.genre  class+="form-control "  style+="width: 50%; border-radius: 50px; margin: auto;" placeholder+="genre" %}
                      </div>
-
-                     <div class="form-group">
+					 <div class="form-group">
 						  {% render_field form.isbno class+="form-control "  style+="width: 50%; border-radius: 50px; margin: auto;" placeholder+="ISBN NUMBER"  %}
                     </div>
-
-                    <div class="form-group">
+					 <div class="form-group">
 						  {% render_field form.Bookadd_img  class+="form-control "  style+="width: 50%; border-radius: 50px; margin: auto;" placeholder+="cover image" %}
-
-                    </div>
-
-                     <div class="form-group">
+					 </div>
+					 <div class="form-group">
 						  {% render_field form.pageno class+="form-control "  style+="width: 50%; border-radius: 50px; margin: auto;" placeholder+="No of pages"  %}
-                    </div>
-                   <br>
-                   <button class="btn btn-main btn-round-full" name="submit" type="submit">Upload</button>
-                   <br><br>
+                    </div><br>
+                   <button class="btn btn-main btn-round-full" name="submit" type="submit">Upload</button><br><br>
                 </form>
             </div>
         </div>

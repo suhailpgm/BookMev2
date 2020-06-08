@@ -1,6 +1,8 @@
 {% extends 'getbook.html' %}
 {% block content %}
 {% for hotel in Books %}
+
+
     {% if hotel.user != request.user %}
         <div class="col-md-4" xmlns="http://www.w3.org/1999/html">
                         <div style="background-color: rgb(241, 240, 240);margin-top:20px;">
@@ -12,17 +14,11 @@
                                     <p style="margin:0;height:60px;">Title:{{hotel.bookname}}</p>
                                     <p style="margin:0;height:60px;">Language:{{hotel.language}}</p>
                                     <p style="margin:0;">ISBN:{{hotel.isbno}}</p>
-
-
                                 </div>
                                 <div class="col-md-6">
                                     <p style="margin: 0;height:60px;">Author:{{hotel.auther}}</p>
                                     <p style="margin: 0;height:60px;">Genre:{{hotel.genre}}</p>
-                                    <p style="margin: 0;">Pages:{{hotel.pageno}}</p>
-
-
-
-                                </div>
+                                    <p style="margin: 0;">Pages:{{hotel.pageno}}</p></div>
                             </div>
                             <div>
                                 {% if hotel.availability == 1 %}

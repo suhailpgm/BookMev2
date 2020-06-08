@@ -1,13 +1,10 @@
+<!--             basic html for importing all css and js file-->
+
 <!doctype html>
 <html lang="en">
   <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="megakit,business,company,agency,multipurpose,modern,bootstrap4">
-
-  <meta name="author" content="themefisher.com">
-
   <title>Bookit</title>
         {% load staticfiles %}
 
@@ -58,9 +55,7 @@
 
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
-						<ul class="dropdown-menu" aria-labelledby="dropdown03">
-							<li><a class="dropdown-item" href="#">Our company</a></li>
-						</ul>
+
 					  </li>
 
 			   		<li class="nav-item dropdown">
@@ -82,7 +77,7 @@
 					{% endif %}
 					 </li>
 
-			  		 <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+
 
 				</ul>
                 {% if user.is_authenticated %}
@@ -90,7 +85,7 @@
 			 		 <a href={% url 'signout' %} class="btn btn-solid-border btn-round-full">SIGN OUT</a>
                 {% else %}
 				<form class="form-lg-inline my-2 my-md-0 ml-lg-4 text-center">
-			 		 <a href="{% url 'contact' %}" class="btn btn-solid-border btn-round-full">Create an account</a>
+			 		 <a href="{% url 'signup' %}" class="btn btn-solid-border btn-round-full">Create an account</a>
                 {% endif %}
 				</form>
 			 </div>

@@ -16,10 +16,6 @@
     </div>
   </nav>
 
-
-
-
-
 <!-- Header Close -->
 <!-- contact form start -->
 <section class="contact-form-wrap section signup-section">
@@ -44,8 +40,8 @@
                                     <div class="col-md-6">
                                        <p class="mb-2" >Uploaded By:<font color="red">{{hotel.user}}</font></p>
                                         <p>Title:{{hotel.bookname}}</p>
-                                        <p>ISBN: Name1</p>
-                                        <p>Genre: Name1</p>
+                                        <p>Language:{{hotel.language}}</p>
+                                        <p>ISBN:{{hotel.isbno}}</p>
                                     </div>
 
 
@@ -61,9 +57,6 @@
                                                 <input type="hidden" name="chatpassmessage" value=" " />
                                                 <button class="btn-sm btn-success mb-2"  type="submit" value="a" name="a">&nbsp;&nbsp;Chat&nbsp;&nbsp;</button>
                                           </form>
-
-
-
 
                                           <form  action= "{% url 'cancel' %}">
                                                 <button class="btn-sm btn-danger" name="availb" value={{hotel.id}} type="submit">Cancel</button>

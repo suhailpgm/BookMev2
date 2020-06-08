@@ -60,9 +60,7 @@
 				
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
-						<ul class="dropdown-menu" aria-labelledby="dropdown03">
-							<li><a class="dropdown-item" href="#">Our company</a></li>
-						</ul>
+
 					  </li>			  
 					  
 			   		<li class="nav-item dropdown">
@@ -75,10 +73,12 @@
 						</ul>
 					 </li>
 					  
-			  		 <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-			
-				</ul>
 
+				</ul>
+<form class="form-lg-inline my-2 my-md-0 ml-lg-4 text-center">
+			 		 <a href="{% url 'index' %}" class="btn btn-solid-border btn-round-full">Sign in</a>
+
+				</form>
 
 			 </div>
 		</div>
@@ -91,7 +91,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                 <form name="f" id="contact-form" class="contact__form" method="post" action="{% url 'contact' %}" onsubmit="return validateForm()">
+                 <form name="f" id="contact-form" class="contact__form" method="post" action="{% url 'signup' %}" onsubmit="return validateForm()">
                     {%  csrf_token %}
                     <div class="row">
                         <div class="col-12">

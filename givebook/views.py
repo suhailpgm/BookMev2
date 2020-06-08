@@ -1,10 +1,9 @@
-
+                             #givebook backend codes
 # Create your views here.
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from .forms import *
 from django.contrib.auth.models import User
-
 from django.contrib import messages
 from django.contrib.auth.models import User, auth
 def bookupload(request):
@@ -22,12 +21,6 @@ def bookupload(request):
 
 
 	return render(request, 'givebook.html', {'form' : form})
-
-# Python program to view
-# for displaying images
-
-
-
 
 def success(request):
 	return HttpResponse('successfully uploaded')

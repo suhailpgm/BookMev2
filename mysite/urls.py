@@ -26,13 +26,13 @@ import status.views
 from django.conf.urls.static import static
 
 
-
+            #URL BAKEND
 urlpatterns = [
     # path('admin/', admin.site.urls),
 
     path('', views.home,name='index'),
     path('admin/', admin.site.urls),
-    path('contact/', signup.views.signuppage,name='contact'),
+    path('signup/', signup.views.signuppage,name='signup'),
     path('signout/',signup.views.signout,name='signout'),
     path('getstarted/',getstart.views.getstarted,name='getstarted'),
     path('getbook/',getbook.views.getabook,name='getabook'),
