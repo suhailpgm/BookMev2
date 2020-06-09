@@ -3,8 +3,8 @@
 {% block content %}
 
 
-                <div class="card" style="width: 50rem; height: 30rem;">
-                        <div class="card-header">
+                <div class="card" style="width: 50rem; height: 30rem; border-radius:25px;border-color:#99beff;box-shadow:5px 5px 10px #82a2d9,-5px -5px 10px #ffffff ">
+                        <div class="card-header" style="border-top-left-radius:25px;border-top-right-radius:25px;background:linear-gradient(to right,#99beff,#c4daff);">
                             <cite><img src="{% static 'images/customer-3.jpeg' %}">{{rname}}</cite>
                          </div>
                              <div class="card-body" style="overflow-y: scroll;">
@@ -20,18 +20,17 @@
         {% endif %}
     {% endif %}
 {% endfor%}
-                             </div><div class="card-footer">
+                             </div><div class="card-footer" style="border-bottom-left-radius:25px;border-bottom-right-radius:25px;background:linear-gradient(to right,#99beff,#c4daff);" >
                                 <form method = "post" enctype="multipart/form-data" action= "{% url 'chatsend' %}">
                                      {% csrf_token %}
                                      {% load widget_tweaks %}
-                                     <div class="msgfoot">
+                                     <div class="form-group" >
 
-                                  {% render_field form.message  class+=" "  style+="width: 80%; border-radius:
-                                         50px; margin: auto;" placeholder+="type your message" %}
+                                  {% render_field form.message  class+="msgfoot"  style+="width: 80%; border-radius: 50px; margin: auto;" placeholder+="_Type your message" %}
 <!--                                     </div><div>-->
                                     <button class="btn btn-main btn-round-full" name="submit" type="submit">
                                         send</button>
-<!--                                     </div>-->
+                                     </div>
                                 </form>
                             </div>
                 </div>
