@@ -13,7 +13,7 @@ def home(request):
             auth.login(request, user)
             return redirect('index')
         else:
-            messages.info(request,'invalid credentials')
+            messages.info(request,'The username and password you entered did not match our records.!')
             return redirect('index')
 
     else:

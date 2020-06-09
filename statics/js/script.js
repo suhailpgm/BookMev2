@@ -15,18 +15,18 @@
         }
         else if (uname==null || uname=="") {  
             alert("username can't be blank");  
-             
+
         }
         else if (email==null || email=="") {  
             alert("email can't be blank");  
-             
+
         }
         else if (password==null || password=="") {  
             alert("password can't be blank");  
-             
+
         }
         else if(password.length<6 ) {  
-            alert("Password must be at least 6 characters long."); 
+            alert("Password must be at least 6 characters long.");
         }    
         else if(password.length>26) {
             alert("Password must be atmost 26 characters long.");
@@ -46,7 +46,7 @@
     }
 
      function validateForm() {
-        length()  
+        length()
         
                 
     }

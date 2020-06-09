@@ -48,18 +48,19 @@
 						<h4 class="card-title text-center mb-4 mt-1 text-color">Sign in</h4>
 						<hr>
 
-						<form action="{% url 'index' %}" method="post">
+						<form action="{% url 'index' %}"   method="post">
                             {% csrf_token %}
-							<div class="form-group">
-								<div class="input-group">
+							<div class="form-group"   >
 
-									<input name="userid" type="text" class="form-control" placeholder="Username" type="text">
+								<div class="input-group-index"  >
+
+									<input name="userid" type="text" class="form-index" placeholder="Username" type="text">
 								</div> <!-- input-group.// -->
 							</div> <!-- form-group// -->
 							<div class="form-group">
-								<div class="input-group">
+								<div class="input-group-index">
 
-									<input name="pass" class="form-control" placeholder="Password" type="password">
+									<input name="pass" class="form-index" placeholder="Password" type="password">
 								</div> <!-- input-group.// -->
 							</div> <!-- form-group// -->
 							<div class="form-group">
@@ -69,7 +70,7 @@
 						</form>
                          <div>
                             {% for message in messages %}
-                            <h3 style="color: black"> {{message}} </h3>
+                            <h4 style="color: red"> {{message}} </h4>
                             {% endfor %}
                          </div>
 					</article>
