@@ -65,14 +65,14 @@
 							<li><a class="dropdown-item" href="{% url 'getabook' %}">Get a book</a></li>
 							<li><a class="dropdown-item" href="{% url 'givebook' %}">Share a book</a></li>
 							<li><a class="dropdown-item" href="{% url 'status' %}">Status</a></li>
-							<li><a class="dropdown-item" href="#">Blog </a></li>
+							<li><a class="dropdown-item" href="{% url 'blogs' %}">Blog </a></li>
 						</ul>
 					{% else %}
 						<ul class="dropdown-menu" aria-labelledby="dropdown05">
 							<li><a class="dropdown-item" href="#">Get a book</a></li>
 							<li><a class="dropdown-item" href="#">Share a book</a></li>
 							<li><a class="dropdown-item" href="#">Status</a></li>
-							<li><a class="dropdown-item" href="#">Blog </a></li>
+							<li><a class="dropdown-item" href="{% url 'blogs' %}">Blog </a></li>
 						</ul>
 					{% endif %}
 					 </li>

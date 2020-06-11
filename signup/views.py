@@ -16,10 +16,10 @@ def signuppage(request):
         if password1==password2:
             if User.objects.filter(username=Username).exists():
                 messages.info(request,'Username already taken')
-                return redirect('contact')
+                return redirect('signup')
             elif User.objects.filter(email=email).exists():
                 messages.info(request,'Email already taken')
-                return redirect('contact')
+                return redirect('signup')
             else:
                 user = User.objects.create_user(username=Username,password=password1,email=email,first_name=first_name,last_name=last_name )
                 user.save();
@@ -27,7 +27,7 @@ def signuppage(request):
 
         else:
             messages.info(request,'password not matching')
-            return redirect('contact')
+            return redirect('signup')
         return redirect('/')
     else:
         return render(request, 'contact.html')

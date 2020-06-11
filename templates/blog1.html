@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<section class="contact-form-wrap section signup-section">
+    <div class="container">
+        <div class="d-flex justify-content-center h-100">
+            <div class="row">
+                <h2 class="text-center" style="margin: auto;">Why Reading Books Makes You a Better Person,</h2>
+                <h4 style="margin: auto; margin-bottom: 30px;"> According to ScienceResearchers have found that people who read regularly are better off.</h4>
+                <img src="{% static 'images/blogimg1.jpg' %}" width="80%" height="400px" style="margin: auto; margin-bottom: 30px;">
+                <p style="font-size: larger; line-height: 150%;">Books are good for people on so many levels. They can help you fall asleep, lower your stress through laughter or tears, provide an escape from reality, and offer exposure to perspectives different from your own. Here are three other ways the practice of reading can make you a better person, according to science.
+                    <br><br>
+                    <span class="font-weight-bold">1. Reading raises your intelligence.</span><br>
+                    Researchers at the University of Edinburgh and King's College London tested 1,890 pairs of twins five times from ages 7 to 16 for reading ability and IQ. They found that the kids with better reading ability--compared with their twins--also showed higher verbal and nonverbal cognitive ability. The authors speculate that while reading may help people remember facts, it may also give people practice in abstract thinking through the process of imagining a book's plot and putting oneself in the shoes of characters.
+                    <br><br>
+                    <span class="font-weight-bold">2. Reading makes you feel happier with yourself and your life.</span><br>
+                    Josie Billington at the University of Liverpool surveyed 4,164 adults and found several interesting differences between people who read regularly and those who do not. Readers reported being less stressed and less depressed, and having higher levels of self-esteem and a greater ability to cope with challenges. Compared with non-readers, they also scored higher in terms of feeling close to friends and their community, and had a stronger awareness of social issues and cultural diversity.
+                    <br><br>
+                    <span class="font-weight-bold">3. Reading protects your memory.</span><br>
+                    A study published in Neurology, the medical journal of the American Academy of Neurology, suggests that brain-stimulating activities such as reading help your brain as you age. The study tested the memory and thinking ability of 294 people every year for about six years before their deaths, which on average occurred at age 89. After death their brains were autopsied for evidence of dementia, such as lesions, plaques, and tangles. Those who reported doing mentally stimulating activities early and late in life had a slower rate of memory decline, compared with those who had not. The rate of decline was reduced by 32 percent in people who were mentally active in their later years, compared with people whose mental activity was only average. And the people who reported infrequent mental activity declined 48 percent faster than those who worked their brains an average amount.
+                </p>
+            </div>        
+        </div>
+    </div>
+</section>
+
+{% endblock %}

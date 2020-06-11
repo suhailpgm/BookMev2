@@ -22,6 +22,7 @@ import signup.views
 import getstart.views
 import getbook.views
 import givebook.views
+import Blog.views
 import status.views
 from django.conf.urls.static import static
 
@@ -35,6 +36,9 @@ urlpatterns = [
     path('signup/', signup.views.signuppage,name='signup'),
     path('signout/',signup.views.signout,name='signout'),
     path('getstarted/',getstart.views.getstarted,name='getstarted'),
+    path('blogs/1/',Blog.views.blogs,name='blogs'),
+    path('blogs/2/', Blog.views.blogs2, name='blogs2'),
+    path('blogs/3/', Blog.views.blogs3, name='blogs3'),
     path('getbook/',getbook.views.getabook,name='getabook'),
     path('booklist/',getbook.views.booklist,name='booklist'),
     path('givebook/',givebook.views.bookupload,name='givebook'),

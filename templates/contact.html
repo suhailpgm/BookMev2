@@ -104,22 +104,28 @@
                     <span class="text-color">Sign up</span>
 					<h3 class="text-md mb-4 text-white">Welcome!</h3>
 					<div class="form-group">
-                        <input name="first_name" type="text" class="form-control" style="width: 50%; border-radius: 50px; margin: auto;"  placeholder="Enter First Name">
+                        <input name="first_name"  type="text" class="form-control" style="width: 50%; border-radius: 50px; margin: auto;"  placeholder="Enter First Name">
+                        <span style="color:red;" id="errormsg1"></span>
                     </div>
                     <div class="form-group">
                         <input name="second_name" type="text" class="form-control" style="width: 50%; border-radius: 50px; margin: auto;"  placeholder="Enter last Name">
+					    <span style="color:red;" id="errormsg2"></span>
 					</div>
 					<div class="form-group">
                         <input name="Username" type="text" class="form-control" style="width: 50%; border-radius: 50px; margin: auto;"  placeholder="Enter Username">
+                        <span style="color:red;" id="errormsg3"></span>
                     </div>
                     <div class="form-group">
                         <input name="email" type="email" class="form-control" style="width: 50%; border-radius: 50px; margin: auto;" placeholder="Enter Email Address">
+                        <span style="color:red;" id="errormsg4"></span>
                     </div>
                     <div class="form-group">
                         <input name="pass" type="password" class="form-control" style="width: 50%; border-radius: 50px; margin: auto;"  placeholder="Enter Password">
+					    <span style="color:red;" id="errormsg5"></span>
 					</div>
 					<div class="form-group">
                         <input name="cpass" type="password" class="form-control" style="width: 50%; border-radius: 50px; margin: auto;"  placeholder="Confirm Password">
+                        <span style="color:red;" id="errormsg6"></span>
                     </div>
                    <button class="btn btn-main btn-round-full" name="submit" type="submit">Submit</button>
                 </form>

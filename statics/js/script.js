@@ -4,49 +4,77 @@
         var lname=f.second_name.value;
         var uname=f.Username.value; 
         var email=f.email.value;
-        var password=f.pass.value;  
-        if (name==null || name=="") {  
-            alert("firstname can't be blank");  
-             return false;
-        }
-        else if (lname==null || lname=="") {  
-            alert("secondname can't be blank");  
-             return false;
-        }
-        else if (uname==null || uname=="") {  
-            alert("username can't be blank");  
+        var password=f.pass.value;
+        var cpassword=f.cpass.value;
+        var errorflag=0;
+        if (name==null || name=="") {
+            document.getElementById('errormsg1').innerHTML="firstname can't be blank";
+            errorflag=1;
+
 
         }
-        else if (email==null || email=="") {  
-            alert("email can't be blank");  
+        if (lname==null || lname=="") {
+            errorflag=1;
+            document.getElementById('errormsg2').innerHTML="secondname can't be blank";
+
 
         }
-        else if (password==null || password=="") {  
-            alert("password can't be blank");  
+        if (uname==null || uname=="") {
+            errorflag=1;
+            document.getElementById('errormsg3').innerHTML="username can't be blank";
+
 
         }
-        else if(password.length<6 ) {  
-            alert("Password must be at least 6 characters long.");
+        if (email==null || email=="") {
+            errorflag=1;
+            document.getElementById('errormsg4').innerHTML="email can't be blank";
+
+
+        }
+        if (password==null || password=="") {
+            errorflag=1;
+            document.getElementById('errormsg5').innerHTML="password can't be blank";
+
+
+        }
+        if(password.length<6 ) {
+            errorflag=1;
+            document.getElementById('errormsg5').innerHTML="Password must be at least 6 characters long.";
+
         }    
-        else if(password.length>26) {
-            alert("Password must be atmost 26 characters long.");
+        if(password.length>26) {
+            errorflag=1;
+            document.getElementById('errormsg5').innerHTML="Password must be atmost 26 characters long.";
+
         }
-        else {
+
+        if(errorflag==0) {
             passwordvalidation()
+        }
+        else{
+
+            return false;
         }
            
     } 
     function passwordvalidation() {
         var p = f.pass.value;
         var cp = f.cpass.value;
-        if (p == cp)
-            alert("Password  match.");
-        else
-            alert("Password do not match.");
+        if (cp==null || cp=="") {
+
+            document.getElementById('errormsg6').innerHTML="confirm you password";
+            length();
+            return false;
+
+        }
+        if (p != cp)
+
+            alert("Password do not match.")
+            return false;
     }
 
      function validateForm() {
-        length()
+       return length()
         
                 
     }
