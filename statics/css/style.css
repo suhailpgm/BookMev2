@@ -1552,12 +1552,14 @@ text-align:center;
 
    border-bottom: 2px solid blue;
 }
+
 .form-index:focus{
  border: 0px;
 
 width:100%;
 border-bottom: 2px solid green;
 }
+
 .input-group-index{
 
 text-align:center;

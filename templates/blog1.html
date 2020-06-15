@@ -19,9 +19,67 @@
                     <span class="font-weight-bold">3. Reading protects your memory.</span><br>
                     A study published in Neurology, the medical journal of the American Academy of Neurology, suggests that brain-stimulating activities such as reading help your brain as you age. The study tested the memory and thinking ability of 294 people every year for about six years before their deaths, which on average occurred at age 89. After death their brains were autopsied for evidence of dementia, such as lesions, plaques, and tangles. Those who reported doing mentally stimulating activities early and late in life had a slower rate of memory decline, compared with those who had not. The rate of decline was reduced by 32 percent in people who were mentally active in their later years, compared with people whose mental activity was only average. And the people who reported infrequent mental activity declined 48 percent faster than those who worked their brains an average amount.
                 </p>
-            </div>        
+
+            </div>
+
+
         </div>
+
     </div>
+
 </section>
+<section class="section latest-blog bg-2 " style=" background: linear-gradient(to bottom, #ff9966 0%, #ffff00 90%);" >
+
+		<div class="row justify-content-center">
+			<div class="col-lg-7 text-center">
+				<div class="section-title">
+					<span class="h6 text-color">Latest Blogs</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="row justify-content-center">
+			<div class="col-lg-4 col-md-6 mb-5">
+				<div class="card bg-transparent border-0">
+					<img src="{% static 'images/1.jpg' %}" alt="" class="img-fluid rounded custu">
+
+					<div class="card-body mt-2">
+
+
+						<h3 class="mt-3 mb-5 lh-36"><a href="{% url 'blogs' %}" class="text-white ">Why Reading Books Makes You a Better Person,</a></h3>
+
+						<a href="{% url 'blogs' %}" class="btn btn-small btn-solid-border btn-round-full text-white">Read More...</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6 mb-5">
+				<div class="card border-0 bg-transparent">
+					<img src="{% static 'images/2.jpg' %}" alt="" class="img-fluid rounded custu">
+
+					<div class="card-body mt-2">
+
+
+						<h3 class="mt-3 mb-5 lh-36"><a href="{% url 'blogs2' %}" class="text-white">3 Unconventional Ways to Become a Better Writer</a></h3>
+
+						<a href="{% url 'blogs2' %}" class="btn btn-small btn-solid-border btn-round-full text-white">Read More...</a>
+				</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6 mb-5">
+				<div class="card border-0 bg-transparent">
+					<img src="{% static 'images/blog3img1.png' %}" alt="" class="img-fluid rounded custu">
+
+					<div class="card-body mt-2">
+						<h3 class="mt-3 mb-5 lh-36"><a href="{% url 'blogs3' %}" class="text-white">Mark Zuckerberg says Facebook will ‘review’ policies on speech...</a></h3>
+
+						<a href="{% url 'blogs3' %}" class="btn btn-small btn-solid-border btn-round-full text-white">Read More...</a></div>
+				</div>
+			</div>
+		</div>
+
+</section>
+
 
 {% endblock %}
