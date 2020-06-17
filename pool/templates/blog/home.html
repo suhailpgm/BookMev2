@@ -13,7 +13,7 @@
         </a>
         <div class="media-body" >
           <div class="article-metadata d-flex justify-content-between" >
-            <a class="mr-2 " href="{% url 'user-posts' post.author.username  %}"><h3>{{ post.author }}</h3></a>
+            <a class="mr-2 " href="{% url 'user-posts' post.author.username  %}">uploaded by<h5 style="color:red;">{{ post.author }}</h5></a>
               <small class="text-muted">{{ post.date_upload|date:"F d, Y" }}</small>
           </div>
           {% if post.file %}
