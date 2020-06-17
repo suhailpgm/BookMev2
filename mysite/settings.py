@@ -32,6 +32,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'htmlcss.apps.HtmlcssConfig',
+    'pool.apps.PoolConfig',
+    'crispy_forms',
     'status.apps.StatusConfig',
     'Blog.apps.BlogConfig',
     'signup.apps.SignupConfig',

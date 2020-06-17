@@ -23,4 +23,4 @@ def bookupload(request):
 	return render(request, 'givebook.html', {'form' : form})
 
 def success(request):
-	return HttpResponse('successfully uploaded')
+	return redirect('getstarted')
