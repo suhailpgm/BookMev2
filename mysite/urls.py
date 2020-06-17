@@ -34,6 +34,7 @@ urlpatterns = [
     path('', views.home,name='index'),
     path('admin/', admin.site.urls),
     path('signup/', signup.views.signuppage,name='signup'),
+    path('about/', signup.views.about, name='about'),
     path('signout/',signup.views.signout,name='signout'),
     path('getstarted/',getstart.views.getstarted,name='getstarted'),
     path('blogs/1/',Blog.views.blogs,name='blogs'),

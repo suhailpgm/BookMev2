@@ -35,3 +35,6 @@ def signuppage(request):
 def signout(request):
       auth.logout(request)
       return redirect('/')
+
+def about(request):
+    return render(request, 'about.html')
