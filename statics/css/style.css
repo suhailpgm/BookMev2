@@ -592,7 +592,7 @@ ul.dropdown-menu li {
 }
 
 .slider {
-  background: url("/static/images/home-1.jpg") no-repeat;
+  background: url("/static/images/home-in.png") no-repeat;
   background-size: cover;
   padding: 100px 0 100px 0;
   position: relative;
@@ -812,7 +812,8 @@ ul.dropdown-menu li {
 }
 
 .hero-img {
-  background: url("/static/images/home-5.jpg");
+  background: url("/static/images/home-3.jpg");
+
   position: absolute;
   content: "";
   background-size: cover;
